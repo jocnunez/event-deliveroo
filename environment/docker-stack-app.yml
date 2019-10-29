@@ -21,6 +21,13 @@ services:
       - 8083:8083
     networks:
       - event-deliveroo-app-network
+  web:
+    image: webapp
+    hostname: web
+    ports:
+      - 8080:80
+    networks:
+      - event-deliveroo-app-network
 volumes:
   data:
 networks:
